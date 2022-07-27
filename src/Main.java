@@ -1,17 +1,17 @@
 import java.util.*;
 
 public class Main {
-
+    private static final List<Integer> nums = new ArrayList<>(List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7, 14, 16, 18, 18, 22));
+    private static final List<String> words = new ArrayList<>(List.of("земля", "вода", "огонь", "воздух", "вода", "воздух", "вода"));
     public static void main(String[] args) {
-        List<Integer> nums = new ArrayList<>(List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7, 14, 16, 18, 18, 22));
-        List<String> words = new ArrayList<>(List.of("земля", "вода", "огонь", "воздух", "вода", "воздух", "вода"));
-        task1(nums);
-        task2(nums);
-        task3(words);
-        task4(words);
+
+        task1();
+        task2();
+        task3();
+        task4();
     }
 
-    private static void task1(List<Integer> nums) {
+    private static void task1() {
         System.out.println("Нечетные числа");
         List<Integer> odd = new ArrayList<>();
         for (Integer num : nums) {
@@ -22,7 +22,7 @@ public class Main {
         System.out.println(odd);
     }
 
-    private static void task2(List<Integer> nums) {
+    private static void task2() {
         System.out.println("Четные числа");
         TreeSet<Integer> even = new TreeSet<>();
         for (Integer num : nums) {
@@ -33,7 +33,7 @@ public class Main {
         System.out.println(even);
     }
 
-    private static void task3(List<String> words) {
+    private static void task3() {
         System.out.println("Уникальные слова");
         Set<String> unique = new HashSet<>();
         Set<String> dup = new HashSet<>();
@@ -46,7 +46,7 @@ public class Main {
         System.out.println(unique);
     }
 
-    private static void task4(List<String> words) {
+    private static void task4() {
         System.out.println("Количество дублей из списка слов");
         Map<String, Integer> countDup = new HashMap<>();
         for (String word : words) {
