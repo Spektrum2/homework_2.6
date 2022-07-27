@@ -7,6 +7,7 @@ public class Main {
 
         task1();
         task2();
+        task2_1();
         task3();
         task4();
     }
@@ -31,6 +32,17 @@ public class Main {
             }
         }
         System.out.println(even);
+    }
+
+    private static void task2_1() {
+        System.out.println("Четные числа, способ 2");
+        int prevNum = Integer.MIN_VALUE;
+        for (int num : nums) {
+            if (num % 2 == 0 && num != prevNum) {
+                System.out.println(num);
+                prevNum = num;
+            }
+        }
     }
 
     private static void task3() {
