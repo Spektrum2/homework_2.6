@@ -25,7 +25,7 @@ public class Main {
 
     private static void task2() {
         System.out.println("Четные числа");
-        TreeSet<Integer> even = new TreeSet<>();
+        Set<Integer> even = new TreeSet<>();
         for (Integer num : nums) {
             if (num % 2 == 0) {
                 even.add(num);
